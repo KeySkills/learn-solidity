@@ -17,10 +17,19 @@ There are plenty of places where you can learn from.
 
 ## Solidity Basics
 
-### 001 - Hello World.sol
+### [001 - Hello World](/Solidity%20Basics/001%20-%20Hello%20World.sol)
 Things to remember:
 - The SPDX License List is a list of commonly found licenses and exceptions used in free and open or collaborative software, data, hardware, or documentation. The SPDX License List includes a standardized short identifier, the full name, the license text, and a canonical permanent URL for each license and exception. See more at [SPDX License List](https://spdx.org/licenses/)
-- ```solidity pragma solidity``` declaration
+- ```pragma solidity``` declaration
 - contract declaration
 - State Variable Visibility - see [Solidity Docs](https://docs.soliditylang.org/en/latest/contracts.html#state-variable-visibility) for more info.
+
+### [002 - Basic Types](/Solidity%20Basics/002%20-%20Basic%20types.sol)
+#### Data storage
+There are three data locations: 
+- memory - only accessed while executing a function, 
+- storage - permanently stored, we call such data state variables
+- calldata - non-modifiable, non-persistent area where function arguments are stored, and behaves mostly like memory.
+Every reference type has an additional annotation, the “data location”, about where it is stored. Most of the time compiler knows what to do and we omit that part.
+More about data types --> [see Types in Solidity Docs](https://docs.soliditylang.org/en/v0.8.21/types.html)
 

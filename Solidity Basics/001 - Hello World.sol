@@ -25,7 +25,7 @@ b) internal - can only be accessed from within the contract they are defined in 
              This is the default visibility level for state variables.
 c) private - like internal ones but they are not visible in derived contracts
 
-no visibility declaration hence "internal"
+no visibility declaration means "internal"
 
 */
 
