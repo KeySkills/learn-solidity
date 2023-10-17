@@ -33,3 +33,57 @@ There are three data locations:
 Every reference type has an additional annotation, the “data location”, about where it is stored. Most of the time compiler knows what to do and we omit that part.
 More about data types --> [see Types in Solidity Docs](https://docs.soliditylang.org/en/v0.8.21/types.html)
 
+### [003 - Ether Units](/Solidity%20Basics/003%20-%20Ether%20Units.sol)
+
+Ether's units (in wei)
+
+<table>
+    <thead>
+        <tr>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Unit's name</td>
+            <td>wei value</td>
+        </tr>
+        <tr>
+            <td>wei</td>
+            <td>1 wei</td>
+        </tr>
+        <tr>
+            <td>Kwei (babbage)</td>
+            <td>1e3 wei</td>
+        </tr>
+        <tr>
+            <td>Mwei (lovelace)</td>
+            <td>1e6 wei</td>
+        </tr>
+        <tr>
+            <td>Gwei (shannon)	</td>
+            <td>1e9 wei</td>
+        </tr>
+        <tr>
+            <td>microether (szabo)	</td>
+            <td>1e12 wei</td>
+        </tr>
+        <tr>
+            <td>milliether (finney)</td>
+            <td>1e15 wei</td>
+        </tr>
+        <tr>
+            <td>ether</td>
+            <td>1e18 wei</td>
+        </tr>
+    </tbody>
+</table>
+
+As it is stated in solidity docs:
+>   A literal number can take a suffix of wei, gwei or ether to specify a subdenomination of Ether, where Ether numbers without a postfix are assumed to be Wei. The denominations finney and szabo have been removed in version 0.7.0.
+
+See [Ether Units in Solidity Docs](https://docs.soliditylang.org/en/v0.8.21/units-and-global-variables.html#ether-units)
+
+
+
