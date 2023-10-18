@@ -86,4 +86,23 @@ As it is stated in solidity docs:
 See [Ether Units in Solidity Docs](https://docs.soliditylang.org/en/v0.8.21/units-and-global-variables.html#ether-units)
 
 
+### [004 - Functions](/Solidity%20Basics/004%20-%20Functions.sol)
 
+- Functions can be **defined inside and outside of contracts**. Functions outside of a contract, also called “free functions”, always have implicit internal visibility. Their code is included in all contracts that call them, similar to internal library functions. The main difference to functions defined inside a contract is that free functions do not have direct access to the variable this, storage variables and functions not in their scope.
+
+- what do you send to function? Temporary variable or the address to main variable?
+
+- returning **multiple variables**
+
+- Functions can be declared **view** in which case they promise not to modify the state.
+
+- Functions can be declared **pure** in which case they promise not to read from or modify the state.
+
+- **Receive** Ether Function - A contract can have at most one receive function. The receive function is executed on a call to the contract with empty calldata.
+
+- **Fallback Function** - A contract can have at most one fallback function
+
+- **Function Overloading** - A contract can have multiple functions of the same name but with different parameter types. This process is called “overloading” and also applies to inherited functions. It is an error if two externally visible functions differ by their Solidity types but not by their external types.
+
+
+See [Function - Solidity Docs](https://docs.soliditylang.org/en/latest/contracts.html#functions)
