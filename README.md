@@ -122,3 +122,23 @@ Modifiers can be used to change the behavior of functions in a declarative way. 
 - example of simple modifiers and the use of ```_;``` 
 - modifiers with parameter
 - Reentrancy Attack
+
+## Solidity Hacks
+### [001 - Reentrancy Attack](/Hacks/001%20-%20Reentrancy%20Attack.sol)
+Here are the steps of a reentrancy attack:
+1) The bad actor makes a call on the vulnerable contract, "X," to transfer funds to the malicious contract, "Y."
+
+2) Contract X determines whether the attacker has the necessary funds, then proceeds to transfer the funds to contract Y.
+
+3) Once contract Y receives the funds, it executes a callback function which calls back into contract X before the balance is updated.
+
+4) This recursive process continues until all funds have been exhausted and transferred.
+
+Types of reentrancy attacks:
+1) **A single reentrancy attack** occurs when the vulnerable function is the same function the attacker is trying to recursively call. Single reentrancy attacks are simpler and easier to prevent than cross-function reentrancy attacks. 
+2) **A cross-function reentrancy attack** is feasible only when a vulnerable function shares state with another function that has a desirable effect for the attacker. Cross-function attacks are harder to detect and more difficult to prevent.
+3) **A cross-contract reentrancy attack** occurs when a state from one contract is called in another before it is fully updated. Cross-contract reentrancy attacks usually occur when multiple contracts manually share the same variable and some update the shared variable insecurely.
+
+Source: [Alchemy page on reentrancy attack](https://www.alchemy.com/overviews/reentrancy-attack-solidity)
+
+The code in the file will not work in ```pragma solidity >=0.8.0;``` since arithmetic operations revert on underflow and overflow. As the balance of the bank's client is of type ```uint256``` decreasing it below 0 will revert the attack. See discussion [here](https://stackoverflow.com/questions/67722470/reentrancy-hack-in-solidity-no-longer-working-on-pragma-0-8-0)
