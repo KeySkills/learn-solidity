@@ -106,3 +106,19 @@ See [Ether Units in Solidity Docs](https://docs.soliditylang.org/en/v0.8.21/unit
 
 
 See [Function - Solidity Docs](https://docs.soliditylang.org/en/latest/contracts.html#functions)
+
+### [005 - Functions](/Solidity%20Basics/005%20-%20Functions.sol)
+
+#### Function's visibility
+- public: visible externally and internally (creates a getter function for storage/state variables)
+- private: only visible in the current contract
+- external: only visible externally (only for functions) - i.e. can only be message-called (via this.func)
+- internal: only visible internally
+Source: [Solidity Docs](https://docs.soliditylang.org/en/latest/cheatsheet.html#function-visibility-specifiers)
+
+#### Function modifiers
+Modifiers can be used to change the behavior of functions in a declarative way. For example, you can use a modifier to automatically check a condition prior to executing the function.
+
+- example of simple modifiers and the use of ```_;``` 
+- modifiers with parameter
+- Reentrancy Attack
