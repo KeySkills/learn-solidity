@@ -123,6 +123,15 @@ Modifiers can be used to change the behavior of functions in a declarative way. 
 - modifiers with parameter
 - Reentrancy Attack
 
+
+### [006 - Custom Errors](/Solidity%20Basics/006%20-%20Custom%20Errors.sol)
+Starting from Solidity v0.8.4, there is a convenient and gas-efficient way to explain to users why an operation failed through the use of custom errors. 
+Custom errors are defined using the ```error``` statement, which can be used inside and outside of contracts (including interfaces and libraries).
+
+Source: [Custom Errors in Solidity](https://soliditylang.org/blog/2021/04/21/custom-errors/)
+
+
+
 ## Solidity Hacks
 ### [001 - Reentrancy Attack](/Hacks/001%20-%20Reentrancy%20Attack.sol)
 Here are the steps of a reentrancy attack:
