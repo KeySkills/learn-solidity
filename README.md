@@ -123,6 +123,9 @@ Modifiers can be used to change the behavior of functions in a declarative way. 
 - modifiers with parameter
 - Reentrancy Attack
 
+#### Constructor
+- special function called only once when creating contract
+
 
 ### [006 - Custom Errors](/Solidity%20Basics/006%20-%20Custom%20Errors.sol)
 Starting from Solidity v0.8.4, there is a convenient and gas-efficient way to explain to users why an operation failed through the use of custom errors. 
@@ -130,6 +133,15 @@ Custom errors are defined using the ```error``` statement, which can be used ins
 
 Source: [Custom Errors in Solidity](https://soliditylang.org/blog/2021/04/21/custom-errors/)
 
+
+### [007 - Inheritance](/Solidity%20Basics/007%20-%20Inheritance.sol)
+
+- When a contract inherits from other contracts, only a single contract is created on the blockchain, and the code from all the base contracts is compiled into the created contract.
+- State variable shadowing is considered as an error. A derived contract can only declare a state variable x, if there is no visible state variable with the same name in any of its bases.
+- Base functions can be overridden by inheriting contracts to change their behavior if they are marked as virtual. The overriding function must then use the override keyword in the function header.
+
+
+See [Inheritance Docs](https://docs.soliditylang.org/en/v0.8.21/contracts.html#inheritance)
 
 
 ## Solidity Hacks
