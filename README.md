@@ -143,6 +143,13 @@ Source: [Custom Errors in Solidity](https://soliditylang.org/blog/2021/04/21/cus
 
 See [Inheritance Docs](https://docs.soliditylang.org/en/v0.8.21/contracts.html#inheritance)
 
+### [008 - Events](/Solidity%20Basics/008%20-%20Events.sol)
+- Solidity events give an abstraction on top of the EVM’s logging functionality. Applications can subscribe and listen to these events through the RPC interface of an Ethereum client.
+- You can add the attribute indexed to up to three parameters which adds them to a special data structure known as “topics” instead of the data part of the log. A topic can only hold a single word (32 bytes) so if you use a reference type for an indexed argument, the Keccak-256 hash of the value is stored as a topic instead.
+- All parameters without the indexed attribute are ABI-encoded into the data part of the log.
+
+
+See [Events Docs](https://docs.soliditylang.org/en/latest/contracts.html#events)
 
 ## Solidity Hacks
 ### [001 - Reentrancy Attack](/Hacks/001%20-%20Reentrancy%20Attack.sol)
