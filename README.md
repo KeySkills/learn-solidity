@@ -151,6 +151,12 @@ See [Inheritance Docs](https://docs.soliditylang.org/en/v0.8.21/contracts.html#i
 
 See [Events Docs](https://docs.soliditylang.org/en/latest/contracts.html#events)
 
+### [009 - Errors](/Solidity%20Basics/009%20-%20Errors.sol)
+- Errors allow you to define descriptive names and data for failure situations. Errors can be used in revert statements. 
+
+
+[Solidity Docs on error handling](https://docs.soliditylang.org/en/v0.8.21/structure-of-a-contract.html#errors)
+
 ## Solidity Hacks
 ### [001 - Reentrancy Attack](/Hacks/001%20-%20Reentrancy%20Attack.sol)
 Here are the steps of a reentrancy attack:
