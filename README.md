@@ -157,6 +157,14 @@ See [Events Docs](https://docs.soliditylang.org/en/latest/contracts.html#events)
 
 [Solidity Docs on error handling](https://docs.soliditylang.org/en/v0.8.21/structure-of-a-contract.html#errors)
 
+### [010 - Loops](/Solidity%20Basics/010%20-%20Loops.sol)
+
+- while loop
+- do while loop
+- for loop
+- continue and break
+
+
 ## Solidity Hacks
 ### [001 - Reentrancy Attack](/Hacks/001%20-%20Reentrancy%20Attack.sol)
 Here are the steps of a reentrancy attack:
