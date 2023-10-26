@@ -164,6 +164,21 @@ See [Events Docs](https://docs.soliditylang.org/en/latest/contracts.html#events)
 - for loop
 - continue and break
 
+### [011 - Arrays](/Solidity%20Basics/011%20-%20Arrays.sol)
+
+- reference types comprise structs, arrays and mappings
+- If you use a reference type, you always have to explicitly provide the data area where the type is stored:
+    - ```memory``` - whose lifetime is limited to an external function call
+    - ```storage``` - the location where the state variables are stored, where the lifetime is limited to the lifetime of a contract
+    - ```calldata``` - special data location that contains the function arguments
+- Arrays can have a compile-time fixed size, or they can have a dynamic size.
+- In Solidity, ```X[3]``` is always an array containing three elements of type X, even if X is itself an array. 
+- Accessing an array past its end causes a failing assertion
+- Method ```.push()``` can be used to append a new element at the end of a **dynamically-sized array**
+- Dynamically-sized arrays can only be resized in storage. In memory, such arrays can be of arbitrary size but the size cannot be changed once an array is allocated.
+
+
+[Solidity Docs - Arrays](https://docs.soliditylang.org/en/v0.8.22/types.html#arrays)
 
 ## Solidity Hacks
 ### [001 - Reentrancy Attack](/Hacks/001%20-%20Reentrancy%20Attack.sol)
