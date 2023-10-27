@@ -180,6 +180,42 @@ See [Events Docs](https://docs.soliditylang.org/en/latest/contracts.html#events)
 
 [Solidity Docs - Arrays](https://docs.soliditylang.org/en/v0.8.22/types.html#arrays)
 
+### [012 - Arrays](/Solidity%20Basics/012%20-%20ERC20.sol)
+- The ERC-20 introduces a standard for Fungible Tokens, in other words, they have a property that makes each Token be exactly the same (in type and value) as another Token. [More info on ethereum.org](https://ethereum.org/en/developers/docs/standards/tokens/erc-20/)
+```solidity
+
+interface IERC20 {
+    
+    event Transfer(address indexed from, address indexed to, uint256 value);
+
+    event Approval(address indexed owner, address indexed spender, uint256 value);
+
+    function totalSupply() external view returns (uint256);
+
+    function balanceOf(address account) external view returns (uint256);
+
+    //emits a {Transfer} event.
+    function transfer(address to, uint256 value) external returns (bool);
+
+    function allowance(address owner, address spender) external view returns (uint256);
+
+    /**
+     * IMPORTANT: changing an allowance with this method brings the risk
+     * that someone may use both the old and the new allowance by unfortunate
+     * transaction ordering. So first reduce the spender's allowance to 0 and set the
+     * desired value afterwards.
+
+     * emits an {Approval} event.
+     */
+    function approve(address spender, uint256 value) external returns (bool);
+
+    //emits a {Transfer} event.
+    function transferFrom(address from, address to, uint256 value) external returns (bool);
+}
+
+
+```
+
 ## Solidity Hacks
 ### [001 - Reentrancy Attack](/Hacks/001%20-%20Reentrancy%20Attack.sol)
 Here are the steps of a reentrancy attack:
