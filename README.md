@@ -180,7 +180,7 @@ See [Events Docs](https://docs.soliditylang.org/en/latest/contracts.html#events)
 
 [Solidity Docs - Arrays](https://docs.soliditylang.org/en/v0.8.22/types.html#arrays)
 
-### [012 - Arrays](/Solidity%20Basics/012%20-%20ERC20.sol)
+### [012 - ERC20 Token](/Solidity%20Basics/012%20-%20ERC20.sol)
 - The ERC-20 introduces a standard for Fungible Tokens, in other words, they have a property that makes each Token be exactly the same (in type and value) as another Token. [More info on ethereum.org](https://ethereum.org/en/developers/docs/standards/tokens/erc-20/)
 ```solidity
 
@@ -213,8 +213,16 @@ interface IERC20 {
     function transferFrom(address from, address to, uint256 value) external returns (bool);
 }
 
+- [ERC20 on OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
 
 ```
+
+### [013 - Unchecked](/Solidity%20Basics/013%20-%20Unchecked.sol)
+- Prior to Solidity 0.8.0, arithmetic operations would always wrap in case of under- or overflow leading to widespread use of libraries that introduce additional checks.
+- Since Solidity 0.8.0, all arithmetic operations revert on over- and underflow by default, thus making the use of these libraries unnecessary.
+- To obtain the previous behavior, an unchecked block can be used. **It also saves gas!**
+
+
 
 ## Solidity Hacks
 ### [001 - Reentrancy Attack](/Hacks/001%20-%20Reentrancy%20Attack.sol)
