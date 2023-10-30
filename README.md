@@ -226,6 +226,10 @@ interface IERC20 {
 
 See [Solidity Docs on mapping](https://docs.soliditylang.org/en/v0.8.21/types.html#mapping-types)
 
+### [015 - Enum](/Solidity%20Basics/015%20-%20Enum.sol)
+- Enums can be used to create custom types with a finite set of ‘constant values’ 
+
+
 ## Solidity Hacks
 ### [001 - Reentrancy Attack](/Hacks/001%20-%20Reentrancy%20Attack.sol)
 Here are the steps of a reentrancy attack:
