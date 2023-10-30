@@ -212,17 +212,19 @@ interface IERC20 {
     //emits a {Transfer} event.
     function transferFrom(address from, address to, uint256 value) external returns (bool);
 }
-
-- [ERC20 on OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
-
 ```
+- [ERC20 on OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
 
 ### [013 - Unchecked](/Solidity%20Basics/013%20-%20Unchecked.sol)
 - Prior to Solidity 0.8.0, arithmetic operations would always wrap in case of under- or overflow leading to widespread use of libraries that introduce additional checks.
 - Since Solidity 0.8.0, all arithmetic operations revert on over- and underflow by default, thus making the use of these libraries unnecessary.
 - To obtain the previous behavior, an unchecked block can be used. **It also saves gas!**
 
+### [014 - Mapping](/Solidity%20Basics/014%20-%20Mappings.sol)
+- Mappings can only have a data location of storage and thus are allowed for state variables, as storage reference types in functions, or as parameters for library functions. They cannot be used as parameters or return parameters of contract functions that are publicly visible. These restrictions are also true for arrays and structs that contain mappings.
+- You cannot iterate over mappings, i.e. you cannot enumerate their keys. It is possible, though, to implement a data structure on top of them and iterate over that. 
 
+See [Solidity Docs on mapping](https://docs.soliditylang.org/en/v0.8.21/types.html#mapping-types)
 
 ## Solidity Hacks
 ### [001 - Reentrancy Attack](/Hacks/001%20-%20Reentrancy%20Attack.sol)
